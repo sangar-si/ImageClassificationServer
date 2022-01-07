@@ -134,8 +134,11 @@ public class FEManager implements ImageQueryService.Iface {
 							result = queryImageInFE(filenames);
 					}
 					else{
-							BEHost selectedBENode = beAvailable.get(0);
-							result =  queryInBE(filenames, selectedBENode);
+					//		BEHost selectedBENode = beAvailable.get(0);
+					//		result =  queryInBE(filenames, selectedBENode);
+							List<String> filenameSplit = new ArrayList<>();
+							filenameSplit = evenSplitFilenames(filenames, beAvailable.size());
+							result = loadBalanceQuery(filenameSplit);
 					}
 					return result;
 				}catch(Exception e){
