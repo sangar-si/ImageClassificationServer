@@ -63,7 +63,7 @@ public class FEManager implements ImageQueryService.Iface {
         	List<String> strList = Arrays.asList(filenames.split(","));
         	List<String> result = new ArrayList<>();
         	List<String> subResult = new ArrayList<>();
-        	int incFacCalc = incFacClac(strList.size(),splitFactor);
+        	int incFactor = incFacCalc(strList.size(),splitFactor);
         	endIdx = incFactor;
        		while(startIdx < strList.size()){
             	subResult = strList.subList(startIdx, endIdx);
