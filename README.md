@@ -5,6 +5,6 @@ Implementation of a image classification server where a client queries the serve
 Execute build.sh to compile the java files. 
 
 ## **Run the servers by the following java code :**
-/usr/lib/jvm/default-java/bin/java -cp .:gen-java/:"lib/*" FENode #portNumber  
-/usr/lib/jvm/default-java/bin/java -cp .:gen-java/:"lib/*" BENode localhost #FEPort #BEPort  
-/usr/lib/jvm/default-java/bin/java -cp .:gen-java/:"lib/*" Client localhost #FEPort "images"  
+java -cp .:gen-java/:"lib"/*" FENode #FEPort  
+java -cp .:gen-java/:"lib"/*" BENode localhost #FEPort #BEPort  
+java -cp .:gen-java/:"lib"/*" Client localhost #FEPort "images"  
